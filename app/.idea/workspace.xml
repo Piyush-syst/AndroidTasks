@@ -9,13 +9,39 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4c0ff88-cc90-4783-be0a-17b258af9f8f" name="Default Changelist" comment="" />
+    <list default="true" id="b4c0ff88-cc90-4783-be0a-17b258af9f8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_datatransport_transport_api_2_2_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_datatransport_transport_backend_cct_2_2_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_datatransport_transport_runtime_2_2_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_6_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_dagger_dagger_2_24_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_datatransport_17_0_3_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_encoders_json_16_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_20_2_3_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_16_3_3_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fireintegration/FbLoginActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fireintegration/MyFirebaseMessagingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/activity_fb_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_17_0_4_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_16_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_17_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_16_3_2_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_messaging_17_3_4_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_messaging_20_2_4_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fireintegration/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fireintegration/Dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fireintegration/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fireintegration/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_dashboard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_dashboard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_24" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_6_API_23" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -52,33 +78,60 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="$PROJECT_DIR$/newone.jks" />
+    <option name="KEY_ALIAS" value="key0" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1hrJXvy5fPabKUjDjAL8DKPEAwe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ApkExportedModule" value="app" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3a_XL_API_23" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-09-23T07:23:29.227Z" />
+    <property name="ExportApk.ApkPath" value="$PROJECT_DIR$" />
+    <property name="ExportApk.BuildVariants" value="release" />
+    <property name="ExportApk.SignV2" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="PsdUISettings">
     <option name="MODULE_TAB" value="Signing Configs" />
   </component>
   <component name="RecentsManager">
-    <key name="android.template.2131773161">
-      <recent name="com.example.fireintegration" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/.." />
+    </key>
+    <key name="android.template.1955284292">
+      <recent name="com.example.fireintegration" />
+    </key>
+    <key name="android.template.2131773161">
+      <recent name="com.example.fireintegration" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -183,26 +236,46 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="239" y="132" width="950" height="537" key="#PSD/72.27.1294.741@72.27.1294.741" timestamp="1600766522450" />
+    <state x="527" y="109" width="374" height="584" key="#com.intellij.ide.util.MemberChooser" timestamp="1600864227168">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="527" y="109" width="374" height="584" key="#com.intellij.ide.util.MemberChooser/72.27.1294.741@72.27.1294.741" timestamp="1600864227168" />
     <state x="402" y="125" width="624" height="551" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600838981635">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="402" y="125" width="624" height="551" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/72.27.1294.741@72.27.1294.741" timestamp="1600838981635" />
-    <state width="1248" height="128" key="GridCell.Tab.0.bottom" timestamp="1600777548819">
+    <state x="452" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600867379863">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="128" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1600777548819" />
-    <state width="1248" height="128" key="GridCell.Tab.0.center" timestamp="1600777548818">
+    <state x="452" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1294.741@72.27.1294.741" timestamp="1600867379863" />
+    <state x="497" y="159" width="424" height="491" key="FileChooserDialogImpl" timestamp="1600847209294">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="128" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1600777548818" />
-    <state width="1248" height="128" key="GridCell.Tab.0.left" timestamp="1600777548817">
+    <state x="497" y="159" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1600847209294" />
+    <state width="1248" height="468" key="GridCell.Tab.0.bottom" timestamp="1600867150209">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="128" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1600777548817" />
-    <state width="1248" height="128" key="GridCell.Tab.0.right" timestamp="1600777548819">
+    <state width="1248" height="468" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1600867150209" />
+    <state width="1248" height="468" key="GridCell.Tab.0.center" timestamp="1600867150207">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="128" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1600777548819" />
+    <state width="1248" height="468" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1600867150207" />
+    <state width="1248" height="468" key="GridCell.Tab.0.left" timestamp="1600867150207">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1248" height="468" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1600867150207" />
+    <state width="1248" height="468" key="GridCell.Tab.0.right" timestamp="1600867150208">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1248" height="468" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1600867150208" />
+    <state x="208" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1600866252898">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="208" y="31" width="1022" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1600866252898" />
+    <state x="172" y="127" width="1094" height="541" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1600850264521">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="172" y="127" width="1094" height="541" key="com.android.tools.idea.avdmanager.AvdListDialog/72.27.1294.741@72.27.1294.741" timestamp="1600850264521" />
     <state x="245" y="140" width="927" height="528" key="psd.add.library.dependency.panel.dimension" timestamp="1600766520258">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
