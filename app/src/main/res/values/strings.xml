@@ -3,4 +3,9 @@
     <string name="facebook_app_id">252896105979143</string>
     <string name="fb_login_protocol_scheme">fb252896105979143</string>
     <string name="default_notification_channel_id">firebase-message</string>
+    <string name="title_activity_move_track">Map</string>
+    <string name="tracking_enabled_notif">Tracking is currently enabled. Tap to cancel.</string>
+    <string name="test_email">pshrivastava@isytango.com</string>
+    <string name="test_password">systango@</string>
+    <string name="firebase_path">location</string>
 </resources>

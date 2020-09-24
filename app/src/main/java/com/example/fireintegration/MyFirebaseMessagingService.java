@@ -56,6 +56,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                     "Channel human readable title",
                     NotificationManager.IMPORTANCE_DEFAULT);
             notificationManager.createNotificationChannel(channel);
+            Log.e("ANotify","Working");
         }
 
         notificationManager.notify(0 /* ID of notification */, notificationBuilder.build());

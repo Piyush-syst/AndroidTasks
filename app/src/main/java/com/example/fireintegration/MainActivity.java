@@ -2,13 +2,21 @@ package com.example.fireintegration;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.renderscript.ScriptGroup;
 import android.util.Log;
 import android.view.View;
+//import android.view.ViewGroup;
+//import android.widget.Button;
+import android.widget.Button;
 import android.widget.Toast;
 //import android.widget.Toast;
 
@@ -24,6 +32,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -33,6 +42,7 @@ import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+//import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.google.gson.Gson;
@@ -42,14 +52,14 @@ import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
 int f=1,f2=1;
-    CallbackManager c;
-    private static final String EMAIL = "email";
+    CallbackManager c,c1;
+//    private static final String EMAIL = "email";
     private static final String public_profile = "public_profile";
 // ...
 // Initialize Firebase Auth
   private FirebaseAuth  mAuth = FirebaseAuth.getInstance();
     static String personName="Amzaing ";
-
+GoogleApiClient gap;
  //   mAuth = FirebaseAuth.getInstance();
     private static final int RC_SIGN_IN = 0;
     GoogleSignInClient g;
@@ -64,6 +74,15 @@ int f=1,f2=1;
                 Log.e("Token", newToken);
             }
         });
+        if (AccessToken.getCurrentAccessToken() != null) {
+            Intent i= new Intent(MainActivity.this,FbLoginActivity.class);
+            startActivity(i);
+        }
+        if (gap != null && gap.isConnected()) {
+            // signed in. Show the "sign out" button and explanation.
+            Intent i= new Intent(MainActivity.this,Dashboard.class);
+            startActivity(i);
+        }
 //        String newToken = instanceIdResult.getToken();
         //  GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         //updateUI(account);
@@ -84,13 +103,73 @@ int f=1,f2=1;
                 // ...
             }
         }});
+        Button b1= findViewById(R.id.trackMe);
+        b1.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent i= new Intent(MainActivity.this, MoveTrack.class);
+                startActivity(i);
+            }
+        });
+//        LocationManager lm = (LocationManager) getSystemService(LOCATION_SERVICE);
+//        if (!lm.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+//            finish();
+//        }
+//        int permission = ContextCompat.checkSelfPermission(this,
+//                Manifest.permission.ACCESS_FINE_LOCATION);
+//        if (permission == PackageManager.PERMISSION_GRANTED) {
+//            startTrackerService();
+//        } else {
+//
+////If the app doesn’t currently have access to the user’s location, then request access//
+//
+//            ActivityCompat.requestPermissions(this,
+//                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+//                    PERMISSIONS_REQUEST);
+//        }
+//
+//
+//    @Override
+//    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[]
+//            grantResults) {
+//
+////If the permission has been granted...//
+//
+//        if (requestCode == PERMISSIONS_REQUEST && grantResults.length == 1
+//                && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+//
+////...then start the GPS tracking service//
+//
+//            startTrackerService();
+//        } else {
+//
+////If the user denies the permission request, then display a toast with some more information//
+//
+//            Toast.makeText(this, "Please enable location services to allow GPS tracking", Toast.LENGTH_SHORT).show();
+//        }
+//    }
+//        Button crashButton = new Button(this);
+//        crashButton.setText("Crash!");
+//        crashButton.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
+//                FirebaseCrashlytics.getInstance().log("Higgs-Boson detected! Bailing out");
+//                throw new RuntimeException("Test Crash"); // Force a crash
+//            }
+//        });
+
+//        addContentView(crashButton, new ViewGroup.LayoutParams(
+//                ViewGroup.LayoutParams.MATCH_PARENT,
+//                ViewGroup.LayoutParams.WRAP_CONTENT));
         // Initialize Facebook Login button
          c= CallbackManager.Factory.create();
+        c1= CallbackManager.Factory.create();
    LoginButton loginButton = findViewById(R.id.login_button);
 
         LoginButton loginButton2 = findViewById(R.id.login_button1);
-        loginButton2.setReadPermissions(Arrays.asList(EMAIL,public_profile));
-        loginButton.setReadPermissions(Arrays.asList(EMAIL,public_profile));
+        loginButton2.setReadPermissions(Arrays.asList(public_profile));
+        loginButton.setReadPermissions(Arrays.asList(public_profile));
         Log.e("Letus","Fb");
         loginButton2.registerCallback(c, new FacebookCallback<LoginResult>() {
 
@@ -117,14 +196,14 @@ int f=1,f2=1;
             }
         });
 //        loginButton.setReadPermissions("email", "public_profile");
-        loginButton.setReadPermissions(Arrays.asList(EMAIL,public_profile));
+        loginButton.setReadPermissions(Arrays.asList(public_profile));
        Log.e("Letus","Fb");
-        loginButton.registerCallback(c, new FacebookCallback<LoginResult>() {
+        loginButton.registerCallback(c1, new FacebookCallback<LoginResult>() {
 
                 @Override
             public void onSuccess(LoginResult loginResult) {
 
-                Log.d("Yoo", "facebook:onSuccess:" + new Gson().toJson(loginResult));
+                Log.d("PP", "facebook:onSuccess:" + new Gson().toJson(loginResult));
 
                f2=2;
 
@@ -143,6 +222,7 @@ int f=1,f2=1;
                 // ...
             }
         });
+
 // ...
         GoogleSignInOptions gso1 = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -228,11 +308,11 @@ int f=1,f2=1;
         //   Log.e("Yahi to chahiye", "firebaseAuthWithGoogle:" + account.getIdToken());
                 if (account != null) {
                     personName = account.getDisplayName();
-                    String personGivenName = account.getGivenName();
-                    String personFamilyName = account.getFamilyName();
-                    String personEmail = account.getEmail();
-                    String personId = account.getId();
-                    Uri personPhoto = account.getPhotoUrl();
+//                    String personGivenName = account.getGivenName();
+//                    String personFamilyName = account.getFamilyName();
+//                    String personEmail = account.getEmail();
+//                    String personId = account.getId();
+//                    Uri personPhoto = account.getPhotoUrl();
                 }
          //       Log.e("23323Yahi to chahiye", "firebaseAuthWithGoogle:" + personName);
         //        Log.e("IDTOKENFirst", "firebaseAuthWithGoogle: "+new Gson().toJson(account));
@@ -345,5 +425,16 @@ int f=1,f2=1;
             Log.w("Without", "signInResult:failed code=" + e.getStatusCode());
 //            updateUI(null);
         }
+    }
+    private void startTrackerService() {
+        startService(new Intent(this, MoveTrack.class));
+
+//Notify the user that tracking has been enabled//
+
+        Toast.makeText(this, "GPS tracking enabled", Toast.LENGTH_SHORT).show();
+
+//Close MainActivity//
+
+        finish();
     }
 }
