@@ -40,9 +40,16 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+
+import org.json.JSONObject;
+
 import java.util.List;
 
-public class MoveTrack extends FragmentActivity implements OnMapReadyCallback {
+import io.branch.referral.Branch;
+import io.branch.referral.BranchError;
+import okio.Options;
+
+public class MoveTrack extends FragmentActivity  implements OnMapReadyCallback  {
 Location location1;
   LatLng point;
     private GoogleMap mMap;
@@ -248,49 +255,46 @@ Location location1;
                     if (location != null ) {
                      //   list.add(new LatLng(location.getLatitude(),location.getLongitude()));
                        if(n==0)
-                       {           point = new LatLng(location.getLatitude(),location.getLongitude());
+                       {          Log.d("Polyploy1if", "location.getLatitude()");
+                           point = new LatLng(location.getLatitude(),location.getLongitude());
                            options.add(point);
                             location1= location;
                            LatLng sydney = new LatLng(location.getLatitude(), location.getLongitude());
                            mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
                            mMap.addMarker(new MarkerOptions().position(sydney).title("Marker at your location"));
+                           n++;
                        }
-                        if( n!=0 && location1!=null && location1!=location) {
-//Save the location data to the database//
-
+                      else  if( n!=0 ) {
+                           Log.d("PolyployIn", "location.getLatitude()");
                             LatLng sydney = new LatLng(location.getLatitude(), location.getLongitude());
                             //  mMap.addMarker(new MarkerOptions().position(sydney).title("Marker at your location"));
                             mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
                             ref.setValue(location);
-//                            Polyline line = mMap.addPolyline(new PolylineOptions()
-//                                    .add(new LatLng(location1.getLatitude()*1e6, location1.getLongitude()*1e6), new LatLng(location.getLatitude()*1e6, location.getLongitude()*1e6))
-//                                    .width(15)
-//                                    .color(Color.RED));
-//                            line.getWidth();
-//                            Polyline polyline1 = mMap.addPolyline(new PolylineOptions()
-//                                    .clickable(true)
-//                                    .add(
-//                                            new LatLng(location1.getLatitude(), location1.getLongitude()),
-//
-//                                            new LatLng(location.getLatitude(), location.getLongitude())));
-//                            polyline1.setVisible(true);
+                            Log.d("Polyploy", "location.getLatitude()");
 
-
-                                 point = new LatLng(location.getLatitude(),location.getLongitude());
+                                 point = sydney;
                                 options.add(point);
+                            Log.d("Polyploy2", "location.getLatitude()");
+                            options.geodesic(true);
+                         //   options.visible(true);
+                           mMap.addPolyline(options);
 
-                            Polyline line = mMap.addPolyline(options);
-
-                            // Position the map's camera near Alice Springs in the center of Australia,
-                            // and set the zoom factor so most of Australia shows on the screen.
                             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 4));
-
+                            Log.d("Polyploy3", "location.getLatitude()");
 
                             mMap.addMarker(new MarkerOptions().position(sydney).title("Marker at your location"));
                                 location1=location;
+                                n++;
                         } }
                 }
             }, null);
         }
     }
+
+
+//    @Override
+//    protected void onPause() {
+//        super.onPause();
+//        unregisterReceiver(stopReceiver);
+//    }
 }

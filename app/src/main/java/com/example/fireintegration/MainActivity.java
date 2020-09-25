@@ -11,11 +11,13 @@ import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.renderscript.ScriptGroup;
 import android.util.Log;
 import android.view.View;
 //import android.view.ViewGroup;
 //import android.widget.Button;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 //import android.widget.Toast;
@@ -24,6 +26,7 @@ import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
+import com.facebook.login.Login;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -43,16 +46,25 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 //import com.google.firebase.crashlytics.FirebaseCrashlytics;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.google.gson.Gson;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.Arrays;
+
+import io.branch.indexing.BranchUniversalObject;
+import io.branch.referral.Branch;
+import io.branch.referral.BranchError;
 //import com.google.firebase.auth.GoogleAuthProvider;
 
 public class MainActivity extends AppCompatActivity {
 int f=1,f2=1;
     CallbackManager c,c1;
+ static   String str;
 //    private static final String EMAIL = "email";
     private static final String public_profile = "public_profile";
 // ...
@@ -68,6 +80,11 @@ GoogleApiClient gap;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this, new OnSuccessListener<InstanceIdResult>() {
+            // Branch logging for debugging
+//        Branch.enableLogging();
+//
+//            // Branch object initialization
+//        Branch.getAutoInstance(this);
             @Override
             public void onSuccess(InstanceIdResult instanceIdResult) {
                 String newToken = instanceIdResult.getToken();
@@ -150,19 +167,19 @@ GoogleApiClient gap;
 //            Toast.makeText(this, "Please enable location services to allow GPS tracking", Toast.LENGTH_SHORT).show();
 //        }
 //    }
-//        Button crashButton = new Button(this);
-//        crashButton.setText("Crash!");
-//        crashButton.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View view) {
-//                FirebaseCrashlytics.getInstance().log("Higgs-Boson detected! Bailing out");
-//                throw new RuntimeException("Test Crash"); // Force a crash
-//            }
-//        });
+        Button crashButton = new Button(this);
+        crashButton.setText("Crash!");
+        crashButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                FirebaseCrashlytics.getInstance().log("Higgs-Boson detected! Bailing out");
+                throw new RuntimeException("Test Crash"); // Force a crash
+            }
+        });
 
-//        addContentView(crashButton, new ViewGroup.LayoutParams(
-//                ViewGroup.LayoutParams.MATCH_PARENT,
-//                ViewGroup.LayoutParams.WRAP_CONTENT));
-        // Initialize Facebook Login button
+        addContentView(crashButton, new ViewGroup.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT));
+
          c= CallbackManager.Factory.create();
         c1= CallbackManager.Factory.create();
    LoginButton loginButton = findViewById(R.id.login_button);
@@ -437,4 +454,57 @@ GoogleApiClient gap;
 
         finish();
     }
+    @Override public void onStart() {
+        super.onStart();
+       Branch.sessionBuilder(this).withCallback(branchReferralInitListener).withData(getIntent() != null ? getIntent().getData() : null).init();
+
+      str = new BranchUniversalObject().getDescription();
+    }
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        // if activity is in foreground (or in backstack but partially visible) launching the same
+        // activity will skip onStart, handle this case with reInitSession
+        Branch.sessionBuilder(this).withCallback(branchReferralInitListener).reInit();
+    }
+    private Branch.BranchReferralInitListener branchReferralInitListener = new Branch.BranchReferralInitListener() {
+        @Override
+        public void onInitFinished(final JSONObject linkProperties, BranchError error) {
+
+    if(linkProperties==null)
+        {
+            Toast.makeText(getApplicationContext(),"JSON is null",Toast.LENGTH_LONG).show();
+        }
+            try {
+                str=linkProperties.getString("og_title");
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            Toast.makeText(getApplicationContext(),str,Toast.LENGTH_LONG).show();
+            try {
+                str= linkProperties.getString("canonical_url");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            findViewById(R.id.branchB).setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){   Intent intent = new Intent(MainActivity.this, CustomApplicationClass.class);
+//        intent.putExtra("branch_force_new_session", true);
+//                    str= linkProperties.toString();
+                    intent.putExtra("KK", linkProperties.toString());
+                    startActivity(intent);
+                }
+
+            });
+
+//            str= linkProperties.toString();
+//            Toast.makeText(getApplicationContext(),str,Toast.LENGTH_LONG).show();
+
+            // do stuff with deep link data (nav to page, display content, etc)
+        }
+    };
+
+
 }
