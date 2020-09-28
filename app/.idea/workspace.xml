@@ -11,14 +11,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4c0ff88-cc90-4783-be0a-17b258af9f8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_branch_sdk_android_library_5_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fireintegration/firstAct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/backg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/front.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/images.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/images2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/activity_first.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/release/app-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/release/app-release.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fireintegration/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fireintegration/Dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fireintegration/FbLoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fireintegration/FbLoginActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fireintegration/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fireintegration/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fireintegration/MoveTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fireintegration/MoveTrack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +106,7 @@
   <component name="PropertiesComponent">
     <property name="ApkExportedModule" value="app" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Nexus_6_API_23" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-09-24T14:12:08.202Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-09-28T09:01:25.922Z" />
     <property name="ExportApk.ApkPath" value="$PROJECT_DIR$" />
     <property name="ExportApk.BuildVariants" value="release" />
     <property name="ExportApk.SignV1" value="true" />
@@ -107,7 +114,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/res/drawable" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -120,6 +127,9 @@
     <key name="android.template.2131773161">
       <recent name="com.example.fireintegration" />
     </key>
+    <key name="android.template.708493116">
+      <recent name="com.example.fireintegration" />
+    </key>
     <key name="android.template.1888338670">
       <recent name="com.example.fireintegration" />
     </key>
@@ -130,6 +140,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/.." />
     </key>
     <key name="android.template.1955284292">
@@ -158,7 +169,7 @@
       <option name="PM_INSTALL_OPTIONS" value="" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
+      <option name="MODE" value="specific_activity" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
@@ -195,12 +206,12 @@
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
+      <option name="ACTIVITY_CLASS" value="com.example.fireintegration.firstAct" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app [signingReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="app [signingReport]" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -255,11 +266,12 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Gradle.app [signingReport]" />
-      </list>
-    </recent_temporary>
+    <list>
+      <item itemvalue="Android App.app" />
+      <item itemvalue="Gradle.app" />
+      <item itemvalue="Gradle.app [signingReport]" />
+      <item itemvalue="Gradle.app::home:ubox73:AndroidStudioProjects:FireIntegration [signingReport]" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -279,38 +291,50 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="239" y="132" width="950" height="537" key="#PSD/72.27.1294.741@72.27.1294.741" timestamp="1600766522450" />
-    <state x="527" y="109" width="374" height="584" key="#com.intellij.ide.util.MemberChooser" timestamp="1600864227168">
+    <state x="177" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601282595111">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="527" y="109" width="374" height="584" key="#com.intellij.ide.util.MemberChooser/72.27.1294.741@72.27.1294.741" timestamp="1600864227168" />
+    <state x="177" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1294.741@72.27.1294.741" timestamp="1601282595111" />
+    <state x="527" y="109" width="374" height="584" key="#com.intellij.ide.util.MemberChooser" timestamp="1601289597559">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="527" y="109" width="374" height="584" key="#com.intellij.ide.util.MemberChooser/72.27.1294.741@72.27.1294.741" timestamp="1601289597559" />
+    <state x="451" y="183" width="525" height="435" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1601282581306">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="451" y="183" width="525" height="435" key="#com.intellij.ide.util.TreeClassChooserDialog/72.27.1294.741@72.27.1294.741" timestamp="1601282581306" />
     <state x="402" y="125" width="624" height="551" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600838981635">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="402" y="125" width="624" height="551" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/72.27.1294.741@72.27.1294.741" timestamp="1600838981635" />
-    <state x="452" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600867379863">
+    <state x="452" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601282155137">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="452" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1294.741@72.27.1294.741" timestamp="1600867379863" />
-    <state x="497" y="159" width="502" height="491" key="FileChooserDialogImpl" timestamp="1600929606828">
+    <state x="452" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1294.741@72.27.1294.741" timestamp="1601282155137" />
+    <state x="568" y="212" width="292" height="377" key="AndroidCreateXmlResourceDialog" timestamp="1601273660810">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="497" y="159" width="502" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1600929606828" />
-    <state width="1248" height="117" key="GridCell.Tab.0.bottom" timestamp="1601031009215">
+    <state x="568" y="212" width="292" height="377" key="AndroidCreateXmlResourceDialog/72.27.1294.741@72.27.1294.741" timestamp="1601273660810" />
+    <state x="497" y="159" width="502" height="491" key="FileChooserDialogImpl" timestamp="1601282476334">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="117" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1601031009215" />
-    <state width="1248" height="117" key="GridCell.Tab.0.center" timestamp="1601031009214">
+    <state x="497" y="159" width="502" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1601282476334" />
+    <state width="1248" height="-18" key="GridCell.Tab.0.bottom" timestamp="1601294359972">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="117" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1601031009214" />
-    <state width="1248" height="117" key="GridCell.Tab.0.left" timestamp="1601031009211">
+    <state width="1248" height="-18" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1601294359972" />
+    <state width="1248" height="-18" key="GridCell.Tab.0.center" timestamp="1601294359971">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="117" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1601031009211" />
-    <state width="1248" height="117" key="GridCell.Tab.0.right" timestamp="1601031009215">
+    <state width="1248" height="-18" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1601294359971" />
+    <state width="1248" height="-18" key="GridCell.Tab.0.left" timestamp="1601294359971">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="117" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1601031009215" />
+    <state width="1248" height="-18" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1601294359971" />
+    <state width="1248" height="-18" key="GridCell.Tab.0.right" timestamp="1601294359972">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1248" height="-18" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1601294359972" />
     <state x="208" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1600937510439">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
@@ -327,13 +351,17 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="383" y="89" width="672" height="677" key="run.anything.popup/72.27.1294.741@72.27.1294.741" timestamp="1600931931702" />
+    <state x="382" y="88" width="672" height="678" key="search.everywhere.popup" timestamp="1601295081408">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="382" y="88" width="672" height="678" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1601295081408" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/fireintegration/Dashboard.java</url>
-          <line>29</line>
+          <line>32</line>
           <properties method="onClick">
             <option name="EMULATED" value="true" />
           </properties>

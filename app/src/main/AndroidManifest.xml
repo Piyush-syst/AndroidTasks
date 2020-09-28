@@ -18,7 +18,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CustomApplicationClass"></activity>
+        <activity android:name=".firstAct">
+<!--            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <activity android:name=".CustomApplicationClass" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -37,11 +46,11 @@
         <activity android:name=".FbLoginActivity" />
         <activity android:name=".Dashboard" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!-- <intent-filter> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+
             <!-- <intent-filter> -->
             <!-- <data android:scheme="fireintegration" /> -->
             <!-- <action android:name="android.intent.action.VIEW" /> -->
@@ -60,7 +69,9 @@
             </intent-filter>
             <intent-filter android:autoVerify="true">
                 <data android:scheme="yourapp" />
+
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
             </intent-filter>
@@ -91,7 +102,6 @@
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
-
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
@@ -101,7 +111,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
